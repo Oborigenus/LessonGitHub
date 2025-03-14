@@ -1,19 +1,19 @@
 ﻿float ParallelepipedArea(float height, float width, float length)
 {
-    var parallelepipedarea = height * length * width;
-    return parallelepipedarea;
+    var parallelepipedArea = height * length * width;
+    return parallelepipedArea;
 }
 
-double ConeArea(double radius, double slantheight)
+double ConeArea(double radius, double slantHeight)
 {
-    var conearea = radius * slantheight * Math.PI;
-    return Math.Round(conearea);
+    var coneArea = radius * slantHeight * Math.PI;
+    return Math.Round(coneArea);
 }
 
 double CylinderArea(double radius, double height)
 {
-    var cylinderarea = radius * radius * Math.PI * 2 + 2 * height * Math.PI * radius;
-    return Math.Round(cylinderarea);
+    var cylinderArea = radius * radius * Math.PI * 2 + 2 * height * Math.PI * radius;
+    return Math.Round(cylinderArea);
 }
 
 void AreaFinder()
@@ -27,10 +27,10 @@ void AreaFinder()
             case 1:
             {
                 Console.WriteLine(
-                    "For parallepiped you need to write down its width , length , height in one line with commas without spaces");
+                    "For parallelepiped you need to write down its width , length , height in one line with commas without spaces");
                 var par = Console.ReadLine();
-                var pararray = par?.Split(',').Select(float.Parse).ToArray();
-                if (pararray != null) Console.WriteLine(ParallelepipedArea(pararray[0], pararray[1], pararray[2]));
+                var parArray = par?.Split(',').Select(float.Parse).ToArray();
+                if (parArray != null) Console.WriteLine(ParallelepipedArea(parArray[0], parArray[1], parArray[2]));
                 continue;
             }
             case 2:
@@ -38,8 +38,8 @@ void AreaFinder()
                 Console.WriteLine(
                     "For cone you need to write down its radius and slant height in one line with commas without spaces in this order");
                 var par = Console.ReadLine();
-                var pararray = par?.Split(',').Select(double.Parse).ToArray();
-                if (pararray != null) Console.WriteLine(ConeArea(pararray[0], pararray[1]));
+                var parArray = par?.Split(',').Select(double.Parse).ToArray();
+                if (parArray != null) Console.WriteLine(ConeArea(parArray[0], parArray[1]));
                 continue;
             }
             case 3:
@@ -47,8 +47,8 @@ void AreaFinder()
                  Console.WriteLine(
                     "For cylinder you need to write down its radius and height in one line with commas without spaces in this order");
                 var par = Console.ReadLine();
-                var pararray = par?.Split(',').Select(double.Parse).ToArray();
-                if (pararray != null) Console.WriteLine(CylinderArea(pararray[0], pararray[1]));
+                var parArray = par?.Split(',').Select(double.Parse).ToArray();
+                if (parArray != null) Console.WriteLine(CylinderArea(parArray[0], parArray[1]));
                 continue;
             }
             case 4:
@@ -64,9 +64,9 @@ void AreaFinder()
 }
 Console.WriteLine("Enter your name");
 var name = Console.ReadLine();
-string[] namearray = ["Hello ", "!"];
-var nameanswer = string.Join( name , namearray);
-Console.WriteLine(nameanswer);
+string[] nameArray = ["Hello ", "!"];
+var nameAnswer = string.Join( name , nameArray);
+Console.WriteLine(nameAnswer);
 Console.WriteLine("Now you must choose a shape for which we will find its area");
 tryAgain:
 try
