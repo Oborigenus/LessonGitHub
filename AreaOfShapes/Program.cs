@@ -53,7 +53,12 @@ void AreaFinder()
             }
             case 4:
             {
-
+                Console.WriteLine("Thank you for using this application!");
+                Console.WriteLine("Goodbye!");
+                return;
+            default:
+                Console.WriteLine("Wrong input, please try again");
+                break;
             }
 
         }
