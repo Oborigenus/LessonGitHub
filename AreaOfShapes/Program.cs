@@ -4,6 +4,12 @@
     return parallelepipedarea;
 }
 
+double ConeArea(double radius, double slantheight)
+{
+    var conearea = radius * slantheight * Math.PI;
+    return Math.Round(conearea);
+}
+
 void AreaFinder()
 {
     while (true)
@@ -23,6 +29,12 @@ void AreaFinder()
             }
             case 2:
             {
+                Console.WriteLine(
+                    "For cone you need to write down its radius and slant height in one line with commas without spaces in this order");
+                var par = Console.ReadLine();
+                var pararray = par?.Split(',').Select(double.Parse).ToArray();
+                if (pararray != null) Console.WriteLine(ConeArea(pararray[0], pararray[1]));
+                continue;
 
             }
             case 3:
