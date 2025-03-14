@@ -1,4 +1,9 @@
-﻿
+﻿float ParallelepipedArea(float height, float width, float length)
+{
+    var parallelepipedarea = height * length * width;
+    return parallelepipedarea;
+}
+
 void AreaFinder()
 {
     while (true)
@@ -9,7 +14,12 @@ void AreaFinder()
         {
             case 1:
             {
-
+                Console.WriteLine(
+                    "For parallepiped you need to write down its width , length , height in one line with commas without spaces");
+                var par = Console.ReadLine();
+                var pararray = par?.Split(',').Select(float.Parse).ToArray();
+                if (pararray != null) Console.WriteLine(ParallelepipedArea(pararray[0], pararray[1], pararray[2]));
+                continue;
             }
             case 2:
             {
