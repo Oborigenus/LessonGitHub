@@ -49,16 +49,13 @@ void AreaFinder()
                 var par = Console.ReadLine();
                 var pararray = par?.Split(',').Select(double.Parse).ToArray();
                 if (pararray != null) Console.WriteLine(CylinderArea(pararray[0], pararray[1]));
-                continue
+                continue;
             }
             case 4:
             {
                 Console.WriteLine("Thank you for using this application!");
                 Console.WriteLine("Goodbye!");
-                return;
-            default:
-                Console.WriteLine("Wrong input, please try again");
-                break;
+                return; 
             }
 
         }
