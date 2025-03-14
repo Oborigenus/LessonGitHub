@@ -10,6 +10,12 @@ double ConeArea(double radius, double slantheight)
     return Math.Round(conearea);
 }
 
+double CylinderArea(double radius, double height)
+{
+    var cylinderarea = radius * radius * Math.PI * 2 + 2 * height * Math.PI * radius;
+    return Math.Round(cylinderarea);
+}
+
 void AreaFinder()
 {
     while (true)
@@ -35,11 +41,15 @@ void AreaFinder()
                 var pararray = par?.Split(',').Select(double.Parse).ToArray();
                 if (pararray != null) Console.WriteLine(ConeArea(pararray[0], pararray[1]));
                 continue;
-
             }
             case 3:
             {
-
+                 Console.WriteLine(
+                    "For cylinder you need to write down its radius and height in one line with commas without spaces in this order");
+                var par = Console.ReadLine();
+                var pararray = par?.Split(',').Select(double.Parse).ToArray();
+                if (pararray != null) Console.WriteLine(CylinderArea(pararray[0], pararray[1]));
+                continue
             }
             case 4:
             {
@@ -66,5 +76,3 @@ catch (Exception)
     Console.WriteLine("Wrong input, please try again");
     goto tryAgain;
 }
-
-
