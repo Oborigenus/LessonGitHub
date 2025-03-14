@@ -3,7 +3,29 @@ void AreaFinder()
 {
     while (true)
     {
-        
+        Console.WriteLine("1 - parallelepiped  ; 2 - cone ; 3 - cylinder ; 4 - exit");
+        var choice = Convert.ToInt32(Console.ReadLine());
+        switch (choice)
+        {
+            case 1:
+            {
+
+            }
+            case 2:
+            {
+
+            }
+            case 3:
+            {
+
+            }
+            case 4:
+            {
+
+            }
+
+        }
+
     }
 }
 Console.WriteLine("Enter your name");
